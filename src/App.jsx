@@ -12,7 +12,7 @@ const CancelPage = lazy(() => import('./pages/CancelPage'));
 
 export default function App() {
   return (
-    <BrowserRouter basename="/thailand">
+    <BrowserRouter basename="/">
 
       <ScrollToTop />
 
