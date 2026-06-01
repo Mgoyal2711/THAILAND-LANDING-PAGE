@@ -78,7 +78,7 @@ function PackageCard({
         >
           {expanded === category
             ? "Hide Details ▲"
-            : "More Info ▼"}
+            : "Inclusion ▼"}
         </button>
 
         {/* Expandable Details */}
@@ -97,27 +97,15 @@ function PackageCard({
         )}
 
         {/* Buttons */}
-        <div className="mt-5 grid grid-cols-2 gap-3">
-
-          <button
-            type="button"
-            onClick={onEnquire}
-            className="flex min-h-12 items-center justify-center rounded-xl bg-[#805d08] px-4 py-3 text-sm font-bold text-white transition hover:scale-105"
-          >
-            ENQUIRE NOW
-          </button>
-
-          <a
-            href="https://wa.me/919599260057"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex min-h-12 items-center justify-center rounded-xl bg-[#046526] px-4 py-3 text-sm font-bold text-white transition hover:scale-105"
-          >
-            WHATSAPP NOW
-          </a>
-
-        </div>
-
+       <div className="mt-5">
+  <button
+    type="button"
+    onClick={onEnquire}
+    className="w-full flex min-h-12 items-center justify-center rounded-xl bg-[#0039b3] px-4 py-3 text-sm font-bold text-white transition hover:scale-105"
+  >
+    ENQUIRE NOW
+  </button>
+</div>
       </div>
 
     </article>
