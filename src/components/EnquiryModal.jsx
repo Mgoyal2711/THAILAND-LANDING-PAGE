@@ -1,4 +1,6 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const TOUR_TYPES = ["Family", "Couple", "Honeymoon", "Friends"];
 
@@ -29,17 +31,29 @@ export default function EnquiryModal({ open, onClose }) {
 
     if (isSubmitting) return;
 
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const templateParams = {
+      full_name: formData.get("full_name"),
+      phone: formData.get("phone"),
+      departure_city: formData.get("departure_city"),
+      travel_date: formatDateForDisplay(travelDate),
+      adults: formData.get("adults"),
+      tour_type: formData.get("tour_type"),
+    };
+
     setIsSubmitting(true);
 
     try {
-      const [{ default: emailjs }, { default: Swal }] = await Promise.all([
-        import("@emailjs/browser"),
-        import("sweetalert2"),
-      ]);
-
-      await emailjs.sendForm("service_uxwdrrf", "template_rvx3a2p", e.target, {
-        publicKey: "5nlF7sfx0GCXUMqiq",
-      });
+      await emailjs.send(
+        "service_uxwdrrf",
+        "template_rvx3a2p",
+        templateParams,
+        {
+          publicKey: "5nlF7sfx0GCXUMqiq",
+        }
+      );
 
       await Swal.fire({
         icon: "success",
@@ -48,16 +62,16 @@ export default function EnquiryModal({ open, onClose }) {
         confirmButtonColor: "#063a7b",
       });
 
-      e.target.reset();
+      form.reset();
       setTravelDate("");
       onClose();
-    } catch {
-      const { default: Swal } = await import("sweetalert2");
+    } catch (error) {
+      console.error("EmailJS Error:", error);
 
       Swal.fire({
         icon: "error",
         title: "Oops!",
-        text: "Something went wrong",
+        text: "Something went wrong. Please try again.",
       });
     } finally {
       setIsSubmitting(false);
