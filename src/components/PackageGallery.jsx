@@ -91,7 +91,7 @@ function PackageCard({
           </div>
 
           <p className="mt-1 text-sm font-semibold text-gray-700">
-            Per Person | Min Pax - 2-4 Person
+             Min Pax - 2 Person
           </p>
 
           <p className="mt-2 text-base font-semibold text-navy">

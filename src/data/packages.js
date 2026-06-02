@@ -24,7 +24,7 @@ export const PACKAGE_DETAILS = {
   '3N|4D': {
   title: 'Simply Thailand',
   price: '₹20,000 / Person',
-   duration: '3N/4D',
+   duration: '3 Nights/4 Days',
   details: [
     '🏨 2 Nights Stay in Pattaya',
     '🏨 1 Night Stay in Bangkok',
@@ -63,7 +63,7 @@ export const PACKAGE_DETAILS = {
   '4N|5D': {
   title: 'Wonderful Thailand',
   price: '₹27,000 / Person',
-  duration: '3N/4D',
+  duration: '3 Nights/4 Days',
 
   details: [
     '🏨 Glow Pattaya or Similar – 2 Nights Stay',
@@ -111,7 +111,7 @@ export const PACKAGE_DETAILS = {
   '4N|5D': {
   title: 'Amazing Thailand',
   price: '₹35,500 / Person',
-  duration: '3N/4D',
+  duration: '3 Nights/4 Days',
 
   details: [
     '🏨 Glow Ao Nang Krabi or Similar – 2 Nights Stay',
@@ -153,7 +153,7 @@ export const PACKAGE_DETAILS = {
   '5N|6D': {
   title: 'Amazing Thailand',
   price: '₹35,500 / Person',
-  duration: '3N/4D',
+  duration: '3 Nights/4 Days',
 
   details: [
     '🏨 Glow Ao Nang Krabi or Similar – 2 Nights Stay',
@@ -194,7 +194,7 @@ export const PACKAGE_DETAILS = {
   '6N|7D': {
   title: 'Blissful Thailand',
   price: '₹45,500 / Person',
-  duration: '3N/4D',
+  duration: '3 Nights/4 Days',
 
   details: [
     '🏨 Glow Ao Nang Krabi or Similar – 2 Nights Stay',
@@ -241,7 +241,7 @@ export const PACKAGE_DETAILS = {
   '7N|8D': {
   title: 'Thailand Exclusive',
   price: '₹52,000 / Person',
-  duration: '3N/4D',
+  duration: '3 Nights/4 Days',
 
   details: [
     '🏨 Glow Ao Nang Krabi or Similar – 2 Nights Stay',
@@ -299,7 +299,7 @@ export const PACKAGE_DETAILS = {
 '8N|9D': {
   title: 'Majestic Thailand',
   price: '₹58,000 / Person',
-  duration: '3N/4D',
+  duration: '3 Nights/4 Days',
 
   details: [
     '🏨 Glow Ao Nang Krabi or Similar – 2 Nights Stay',
