@@ -27,6 +27,7 @@ export const PACKAGE_DETAILS = {
     extraAdultPrice: "₹12,500",
     duration: '3 Nights/4 Days',
     cityHeading: "pattaya • bangkok",
+    offerPrice: "₹16,500",
     details: [
       '🏨 2 Nights Stay in Pattaya',
       '🏨 1 Night Stay in Bangkok',
@@ -68,6 +69,7 @@ export const PACKAGE_DETAILS = {
     extraAdultPrice: "₹17,000",
     cityHeading: "BANGKOK • pattaya",
     duration: '4 Nights/5 Days',
+    offerPrice: "₹16,500",
 
 
     details: [
@@ -119,6 +121,7 @@ export const PACKAGE_DETAILS = {
     extraAdultPrice: "₹17,500",
     cityHeading: "KRABI • PHUKET",
     duration: '4 Nights/5 Days',
+    offerPrice: "₹16,500",
 
     details: [
       "🏨 Glow Ao Nang Krabi or Similar, Krabi - 2 Nights Stay",
@@ -170,6 +173,7 @@ export const PACKAGE_DETAILS = {
     extraAdultPrice: "₹22,000",
     cityHeading: "PHUKET • PHIPHI • KRABI",
     duration: '5 Nights/6 Days',
+    offerPrice: "₹16,500",
 
     details: [
       '🏨 Glow Ao Nang Krabi or Similar – 2 Nights Stay',
@@ -213,6 +217,7 @@ export const PACKAGE_DETAILS = {
     extraAdultPrice: "₹28,500",
     cityHeading: "KRABI • PHUKET • BANGKOK",
     duration: '6 Nights/7 Days',
+    offerPrice: "₹16,500",
 
     details: [
       '🏨 Glow Ao Nang Krabi or Similar – 2 Nights Stay',
@@ -262,6 +267,7 @@ export const PACKAGE_DETAILS = {
     extraAdultPrice: "₹32,500",
     cityHeading: "KRABI • PHUKET • PATTAYA • BANGKOK",
     duration: '7 Nights/8 Days',
+    offerPrice: "₹16,500",
 
     details: [
       '🏨 Glow Ao Nang Krabi or Similar – 2 Nights Stay',
@@ -322,6 +328,7 @@ export const PACKAGE_DETAILS = {
     extraAdultPrice: "₹36,500",
     cityHeading: "BANGKOK • PATTAYA • KRABI • PHIPHI • PHUKET",
     duration: '8 Nights/9 Days',
+    offerPrice: "₹16,500",
 
     details: [
       '🏨 Glow Ao Nang Krabi or Similar – 2 Nights Stay',

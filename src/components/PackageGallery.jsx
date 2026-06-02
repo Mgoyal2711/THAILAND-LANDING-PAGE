@@ -74,16 +74,16 @@ function PackageCard({
       </div>
 
       <div className="p-5">
-        
+        {packageInfo?.cityHeading && (
+          <p
+            className="mb-2 text-sm font-extrabold uppercase tracking-wide text-red-600
+  "
+          >
+            {packageInfo.cityHeading}
+          </p>
+        )}
 
-{packageInfo?.cityHeading && (
-  <p className="mb-2 text-sm font-extrabold uppercase tracking-wide text-red-600
-  ">
-    {packageInfo.cityHeading}
-  </p>
-)}
-
-{/* {packageInfo?.cityHeading && (
+        {/* {packageInfo?.cityHeading && (
   <div className="mb-2 flex justify-end">
     <span className="rounded-full bg-blue-50 px-3 py-1 text-sm font-extrabold uppercase tracking-wide text-blue-700">
       {packageInfo.cityHeading}
@@ -103,20 +103,20 @@ function PackageCard({
         <div className="mt-3">
           <div className="flex items-center justify-between gap-3">
             <div className="flex flex-wrap items-end gap-x-3 gap-y-1">
-  <p className="text-xl font-extrabold text-slate-400 line-through decoration-red-500 decoration-2">
-    {packageInfo?.price}
-  </p>
+              <p className="text-xl font-extrabold text-slate-400 line-through decoration-red-500 decoration-2">
+                {packageInfo?.price}
+              </p>
 
-  <p className="text-3xl font-extrabold text-red-600">
-    {packageInfo?.offerPrice || packageInfo?.price}
-  </p>
+              <p className="text-3xl font-extrabold text-red-600">
+                {packageInfo?.offerPrice || packageInfo?.price}
+              </p>
 
-  {packageInfo?.offerPrice && (
-    <span className="mb-1 rounded-full bg-red-100 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-red-700">
-      Offer Price
-    </span>
-  )}
-</div>
+              {packageInfo?.offerPrice && (
+                <span className="mb-1 rounded-full bg-red-100 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-red-700">
+                  Offer Price
+                </span>
+              )}
+            </div>
           </div>
 
           <p className="mt-1 text-sm font-semibold text-gray-700">
@@ -124,16 +124,15 @@ function PackageCard({
           </p>
 
           <p className="mt-2 text-base font-semibold text-navy">
-  Extra Adult{" "}
-  <span className="font-extrabold text-red-600">
-    {packageInfo?.extraAdultPrice || "₹15,000"}
-  </span>
-</p>
+            Extra Adult{" "}
+            <span className="font-extrabold text-red-600">
+              {packageInfo?.extraAdultPrice || "₹15,000"}
+            </span>
+          </p>
 
           <p className="mt-1 text-base text-navy">
             <span className="font-extrabold">4 Star</span> Hotel
           </p>
-          
 
           <div className="mt-4">
             <p className="text-base font-extrabold text-orange-700">
@@ -177,7 +176,9 @@ function PackageCard({
           onClick={() => setExpanded(expanded === category ? null : category)}
           className="mt-4 w-full rounded-xl border border-red-500 py-3 font-semibold text-red-600 transition hover:bg-red-50"
         >
-          {expanded === category ? "Hide Tour Details ▲" : "View Tour Details ▼"}
+          {expanded === category
+            ? "Hide Tour Details ▲"
+            : "View Tour Details ▼"}
         </button>
 
         {expanded === category && (
@@ -227,7 +228,7 @@ export default function PackageGallery({ onEnquire }) {
     (PACKAGE_IMAGES_BY_CATEGORY[category] || []).map((src) => ({
       category,
       src,
-    }))
+    })),
   );
 
   const mobilePackages = desktopPackages;
