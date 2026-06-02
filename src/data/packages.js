@@ -267,7 +267,7 @@ export const PACKAGE_DETAILS = {
     extraAdultPrice: "₹32,500",
     cityHeading: "KRABI • PHUKET • PATTAYA • BANGKOK",
     duration: '7 Nights/8 Days',
-    offerPrice: "₹16,500",
+    offerPrice: "₹45,500",
 
     details: [
       '🏨 Glow Ao Nang Krabi or Similar – 2 Nights Stay',
@@ -328,7 +328,7 @@ export const PACKAGE_DETAILS = {
     extraAdultPrice: "₹36,500",
     cityHeading: "BANGKOK • PATTAYA • KRABI • PHIPHI • PHUKET",
     duration: '8 Nights/9 Days',
-    offerPrice: "₹16,500",
+    offerPrice: "₹47,500",
 
     details: [
       '🏨 Glow Ao Nang Krabi or Similar – 2 Nights Stay',
