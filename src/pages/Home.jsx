@@ -276,7 +276,7 @@ shadow-lg
 
                     <div className="mt-2 flex items-center gap-3">
                       <span className="text-5xl font-extrabold text-navy">
-                        ₹16,500
+                        ₹16,000
                       </span>
 
                       <span className="rounded-full bg-emerald-100 px-3 py-1 text-sm font-bold text-emerald-700">
