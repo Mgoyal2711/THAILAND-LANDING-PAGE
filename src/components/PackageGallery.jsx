@@ -7,13 +7,13 @@ import {
 import OptimizedImage from "./OptimizedImage";
 
 const BADGES = [
-  "🏆 POPULAR PACKAGE",
-  "🔥 BEST SELLING",
-  "✈️ HIGH DEMAND",
-  "❤️ BEST SELLING",
-  "💰 VALUE FOR MONEY",
-  "🌟 HIGH DEMAND",
-  "🎁 SUPER SAVER",
+  "POPULAR PACKAGE - 20% off ",
+  "BEST SELLING - 8% off ",
+  "HIGH DEMAND - 15% off ",
+  "BEST SELLING - 10% off ",
+  "VALUE FOR MONEY - 5% off ",
+  "HIGH DEMAND - 12% off ",
+  "SUPER SAVER - 18% off ",
 ];
 
 function PackageCard({
