@@ -1,7 +1,7 @@
 export const PACKAGE_CATEGORIES = [
   '3N|4D',
   '4N|5D',
-  '4Night|5D',
+  // '4Night|5D',
   '5N|6D',
   '6N|7D',
   '7N|8D',
@@ -10,14 +10,42 @@ export const PACKAGE_CATEGORIES = [
 
 const BASE = import.meta.env.BASE_URL;
 
+// export const PACKAGE_IMAGES_BY_CATEGORY = {
+//   '3N|4D': [`${BASE}optimized/3-nights/0.jpg`],
+//   '4N|5D': [`${BASE}optimized/4-nights/1.jpg`],
+//   '4N|5D': [`${BASE}optimized/4-nights/1.1.jpg`],
+//   '5N|6D': [`${BASE}optimized/5-nights/2.jpg`],
+//   '6N|7D': [`${BASE}optimized/6-nights/3.jpg`],
+//   '7N|8D': [`${BASE}optimized/7-nights/4.jpg`],
+//   '8N|9D': [`${BASE}optimized/8-nights/5.jpg`],
+// };
+
+
 export const PACKAGE_IMAGES_BY_CATEGORY = {
-  '3N|4D': [`${BASE}optimized/3-nights/0.jpg`],
-  '4N|5D': [`${BASE}optimized/4-nights/1.jpg`],
-  '4Night|5D': [`${BASE}optimized/4-nights/1.1.jpg`],
-  '5N|6D': [`${BASE}optimized/5-nights/2.jpg`],
-  '6N|7D': [`${BASE}optimized/6-nights/3.jpg`],
-  '7N|8D': [`${BASE}optimized/7-nights/4.jpg`],
-  '8N|9D': [`${BASE}optimized/8-nights/5.jpg`],
+  "3N|4D": [
+    { src: `${BASE}optimized/3-nights/0.jpg`, detailsKey: "3N|4D" },
+  ],
+
+  "4N|5D": [
+    { src: `${BASE}optimized/4-nights/1.jpg`, detailsKey: "4N|5D" },
+    { src: `${BASE}optimized/4-nights/1.1.jpg`, detailsKey: "4Night|5D" },
+  ],
+
+  "5N|6D": [
+    { src: `${BASE}optimized/5-nights/2.jpg`, detailsKey: "5N|6D" },
+  ],
+
+  "6N|7D": [
+    { src: `${BASE}optimized/6-nights/3.jpg`, detailsKey: "6N|7D" },
+  ],
+
+  "7N|8D": [
+    { src: `${BASE}optimized/7-nights/4.jpg`, detailsKey: "7N|8D" },
+  ],
+
+  "8N|9D": [
+    { src: `${BASE}optimized/8-nights/5.jpg`, detailsKey: "8N|9D" },
+  ],
 };
 
 export const PACKAGE_DETAILS = {
@@ -277,10 +305,6 @@ export const PACKAGE_DETAILS = {
 
       '⭐ 4 Star Premium Accommodation',
 
-      '💰 Per Person: ₹52,000',
-      '👨 Extra Adult: ₹39,000',
-      '👶 Extra Child: ₹34,000',
-
       '🍽️ Daily Breakfast Included',
 
       '✈️ Meet & Greet Service at Airport',
@@ -337,10 +361,6 @@ export const PACKAGE_DETAILS = {
       '🏨 Bangkok Palace or Similar – 2 Nights Stay',
 
       '⭐ 4 Star Premium Accommodation',
-
-      '💰 Per Person: ₹58,000',
-      '👨 Extra Adult: ₹44,000',
-      '👶 Extra Child: ₹38,000',
 
       '🍽️ Daily Breakfast Included',
 
