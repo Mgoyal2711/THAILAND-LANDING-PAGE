@@ -36,13 +36,13 @@ function PackageCard({
             rounded-full
             border-2 border-white
             bg-gradient-to-r
-            from-red-700
-            via-orange-500
-            to-yellow-400
+            from-blue-900
+            via-blue-500
+            to-blue-400
             px-3
             py-[6px]
             shadow-[0_0_22px_rgba(255,90,0,0.95)]
-            animate-pulse
+            
           "
           style={{ animationDuration: "5s" }}
         >
@@ -55,25 +55,29 @@ function PackageCard({
       </div>
 
       <div className="relative h-[260px] w-full overflow-hidden sm:h-[280px] lg:h-[300px]">
-  <OptimizedImage
-    src={src}
-    alt={packageInfo?.title || "Thailand Package"}
-    width="666"
-    height="1000"
-    className="ko-img h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
-  />
+        <OptimizedImage
+          src={src}
+          alt={packageInfo?.title || "Thailand Package"}
+          width="666"
+          height="1000"
+          className="ko-img h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
+        />
 
-  <div className="absolute bottom-0 right-0 bg-red-500 px-5 py-3">
-    <span className="text-base font-bold text-white">
-      {packageInfo?.duration}
-    </span>
-  </div>
-</div>
+        <div className="absolute bottom-0 right-0 bg-red-500 px-1 py-0 ">
+          <span className="text-base font-bold text-white">
+            {packageInfo?.duration}
+          </span>
+        </div>
+      </div>
 
       <div className="p-5">
-        <h3 className="text-2xl font-bold text-navy">
-          {packageInfo?.title}
-        </h3>
+  <div className="mb-2 inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-green-700">
+    ALL INCLUSIVE
+  </div>
+
+  <h3 className="text-2xl font-bold text-navy">
+    {packageInfo?.title}
+  </h3>
 
         {/* <p className="mt-1 font-medium text-gray-500">
           {category.replace("|", "/")}
@@ -91,7 +95,7 @@ function PackageCard({
           </div>
 
           <p className="mt-1 text-sm font-semibold text-gray-700">
-             Min Pax - 2 Person
+            (PER PERSON) | Min Pax - 2 Person
           </p>
 
           <p className="mt-2 text-base font-semibold text-navy">
@@ -104,40 +108,40 @@ function PackageCard({
           </p>
 
           <div className="mt-3">
-  <p className="text-base font-semibold text-navy">Inclusions</p>
+            <p className="text-base font-semibold text-navy">Inclusions</p>
 
-  <div className="mt-3 grid grid-cols-4 gap-3">
-    <div className="flex flex-col items-center text-center">
-      <span className="text-2xl">🍽️</span>
-      <span className="mt-1 text-[11px] font-semibold leading-tight text-gray-700">
-        Meals
-      </span>
-    </div>
+            <div className="mt-3 grid grid-cols-4 gap-3">
+              <div className="flex flex-col items-center text-center">
+                <span className="text-2xl">🍽️</span>
+                <span className="mt-1 text-[11px] font-semibold leading-tight text-gray-700">
+                  Meals
+                </span>
+              </div>
 
-    <div className="flex flex-col items-center text-center">
-      <span className="text-2xl">🚐</span>
-      <span className="mt-1 text-[11px] font-semibold leading-tight text-gray-700">
-        Airport Transfers
-      </span>
-    </div>
+              <div className="flex flex-col items-center text-center">
+                <span className="text-2xl">🚐</span>
+                <span className="mt-1 text-[11px] font-semibold leading-tight text-gray-700">
+                  Airport Transfers
+                </span>
+              </div>
 
-    <div className="flex flex-col items-center text-center">
-      <span className="text-2xl">🏨</span>
-      <span className="mt-1 text-[11px] font-semibold leading-tight text-gray-700">
-        Hotel
-      </span>
-    </div>
+              <div className="flex flex-col items-center text-center">
+                <span className="text-2xl">🏨</span>
+                <span className="mt-1 text-[11px] font-semibold leading-tight text-gray-700">
+                  Hotel
+                </span>
+              </div>
 
-    <div className="flex flex-col items-center text-center">
-      <span className="text-2xl">🚗</span>
-      <span className="mt-1 text-[11px] font-semibold leading-tight text-gray-700">
-        Transport
-      </span>
-    </div>
-  </div>
-</div>
+              <div className="flex flex-col items-center text-center">
+                <span className="text-2xl">🚗</span>
+                <span className="mt-1 text-[11px] font-semibold leading-tight text-gray-700">
+                  Transport
+                </span>
+              </div>
+            </div>
+          </div>
 
-          <div className="mt-4">
+          {/* <div className="mt-4">
             <p className="text-lg font-extrabold text-navy">
               Package Excludes
             </p>
@@ -146,7 +150,7 @@ function PackageCard({
               <span className="text-xl text-red-600">❌</span>
               Flight Ticket Available - At Best Prices
             </p>
-          </div>
+          </div> */}
         </div>
 
         {/* More Info Button */}
@@ -155,7 +159,7 @@ function PackageCard({
           onClick={() => setExpanded(expanded === category ? null : category)}
           className="mt-4 w-full rounded-xl border border-red-500 py-3 font-semibold text-red-600 transition hover:bg-red-50"
         >
-          {expanded === category ? "Hide Details ▲" : "Package Inclusion ▼"}
+          {expanded === category ? "Hide Details ▲" : "Tour Highlights ▼"}
         </button>
 
         {/* Expandable Details */}
@@ -235,11 +239,10 @@ export default function PackageGallery({ onEnquire }) {
                 key={category}
                 type="button"
                 onClick={() => selectCategory(category)}
-                className={`${
-                  isActive
+                className={`${isActive
                     ? "btn-travel-gradient text-white shadow-lg"
                     : "bg-white text-navy hover:border-ocean/30 hover:bg-slate-100"
-                } min-h-12 rounded-full border border-red-500 px-4 py-2 text-sm font-semibold transition duration-300`}
+                  } min-h-12 rounded-full border border-red-500 px-4 py-2 text-sm font-semibold transition duration-300`}
               >
                 {category.replace("|", "/")}
               </button>
