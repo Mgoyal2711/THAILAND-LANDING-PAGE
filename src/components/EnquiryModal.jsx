@@ -36,7 +36,7 @@ export default function EnquiryModal({ open, onClose }) {
 
     const templateParams = {
       full_name: formData.get("full_name"),
-      phone: formData.get("phone"),
+      phone: `+91 ${formData.get("phone")}`,
       departure_city: formData.get("departure_city"),
       travel_date: formatDateForDisplay(travelDate),
       adults: formData.get("adults"),
@@ -52,29 +52,38 @@ export default function EnquiryModal({ open, onClose }) {
         templateParams,
         {
           publicKey: "5nlF7sfx0GCXUMqiq",
-        }
+        },
       );
-
-      await Swal.fire({
-        icon: "success",
-        title: "Success 🎉",
-        text: "Enquiry Sent Successfully",
-        confirmButtonColor: "#063a7b",
-      });
 
       form.reset();
       setTravelDate("");
+      setIsSubmitting(false);
       onClose();
+
+      setTimeout(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Success 🎉",
+          text: "Enquiry Sent Successfully",
+          confirmButtonColor: "#063a7b",
+        });
+      }, 150);
     } catch (error) {
       console.error("EmailJS Error:", error);
+      setIsSubmitting(false);
 
       Swal.fire({
         icon: "error",
         title: "Oops!",
         text: "Something went wrong. Please try again.",
+        confirmButtonColor: "#063a7b",
+        didOpen: () => {
+          const swalContainer = document.querySelector(".swal2-container");
+          if (swalContainer) {
+            swalContainer.style.zIndex = "1000000";
+          }
+        },
       });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -221,7 +230,9 @@ export default function EnquiryModal({ open, onClose }) {
               disabled={isSubmitting}
               className="mt-3 w-full rounded-xl bg-gradient-to-r from-[#022b57] to-[#004a8f] py-2.5 text-sm font-bold text-white transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-70 sm:mt-5 sm:py-3 sm:text-base"
             >
-              {isSubmitting ? "Sending..." : "Get My Quote 🚀 | Get 20% Off Now"}
+              {isSubmitting
+                ? "Sending..."
+                : "Get My Quote 🚀 | Get 20% Off Now"}
             </button>
           </form>
         </div>
