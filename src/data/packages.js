@@ -164,7 +164,7 @@ export const PACKAGE_DETAILS = {
   '5N|6D': {
     title: 'AMAZING THAILAND',
     price: '₹35,500',
-    cityHeading: "PHUKET • PHIPHI • KARABI",
+    cityHeading: "PHUKET • PHIPHI • KRABI",
     duration: '5 Nights/6 Days',
 
     details: [
