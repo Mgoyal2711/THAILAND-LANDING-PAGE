@@ -286,9 +286,9 @@ export default function EnquiryModal({ open, onClose }) {
               Get Free Quotes In 30 Minutes
             </h2>
 
-            <p className="mt-1 text-right text-[10px] font-semibold uppercase tracking-wide text-gray-500">
+            {/* <p className="mt-1 text-right text-[10px] font-semibold uppercase tracking-wide text-gray-500">
               Terms & Conditions Applied
-            </p>
+            </p> */}
 
             <button
               type="button"

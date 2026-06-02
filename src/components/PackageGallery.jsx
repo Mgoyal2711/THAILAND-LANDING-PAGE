@@ -77,7 +77,8 @@ function PackageCard({
         
 
 {packageInfo?.cityHeading && (
-  <p className="mb-2 text-sm font-extrabold uppercase tracking-wide text-blue-700">
+  <p className="mb-2 text-sm font-extrabold uppercase tracking-wide text-red-600
+  ">
     {packageInfo.cityHeading}
   </p>
 )}
