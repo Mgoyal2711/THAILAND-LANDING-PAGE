@@ -102,9 +102,21 @@ function PackageCard({
 
         <div className="mt-3">
           <div className="flex items-center justify-between gap-3">
-            <p className="text-3xl font-extrabold text-red-600">
-              {packageInfo?.price}
-            </p>
+            <div className="flex flex-wrap items-end gap-x-3 gap-y-1">
+  <p className="text-xl font-extrabold text-slate-400 line-through decoration-red-500 decoration-2">
+    {packageInfo?.price}
+  </p>
+
+  <p className="text-3xl font-extrabold text-red-600">
+    {packageInfo?.offerPrice || packageInfo?.price}
+  </p>
+
+  {packageInfo?.offerPrice && (
+    <span className="mb-1 rounded-full bg-red-100 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-red-700">
+      Offer Price
+    </span>
+  )}
+</div>
           </div>
 
           <p className="mt-1 text-sm font-semibold text-gray-700">
