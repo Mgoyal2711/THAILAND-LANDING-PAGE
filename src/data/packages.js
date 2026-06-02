@@ -22,9 +22,10 @@ export const PACKAGE_IMAGES_BY_CATEGORY = {
 
 export const PACKAGE_DETAILS = {
   '3N|4D': {
-  title: 'Simply Thailand',
+  title: 'SIMPLY THAILAND',
   price: '₹20,000',
    duration: '3 Nights/4 Days',
+   cityHeading: "KRABI • PHUKET",
   details: [
     '🏨 2 Nights Stay in Pattaya',
     '🏨 1 Night Stay in Bangkok',
@@ -61,9 +62,11 @@ export const PACKAGE_DETAILS = {
 },
 
   '4N|5D': {
-  title: 'Wonderful Thailand',
+  title: 'WONDERFUL THAILAND',
   price: '₹27,000',
+  cityHeading: "KRABI • PHUKET",
   duration: '4 Nights/5 Days',
+
 
   details: [
     '🏨 Glow Pattaya or Similar – 2 Nights Stay',
@@ -109,8 +112,9 @@ export const PACKAGE_DETAILS = {
 },
 
   '4Night|5D': {
-  title: 'Pleasurable Thailand',
+  title: 'PLEASURABLE THAILAND',
   price: '₹28,0000',
+  cityHeading: "KRABI • PHUKET",
   duration: '4 Nights/5 Days',
 
   details: [
@@ -158,8 +162,9 @@ export const PACKAGE_DETAILS = {
 },
 
   '5N|6D': {
-  title: 'Amazing Thailand',
+  title: 'AMAZING THAILAND',
   price: '₹35,500',
+  cityHeading: "KRABI • PHUKET",
   duration: '5 Nights/6 Days',
 
   details: [
@@ -199,8 +204,9 @@ export const PACKAGE_DETAILS = {
   ],
 },
   '6N|7D': {
-  title: 'Blissful Thailand',
+  title: 'BLISSFUL THAILAND',
   price: '₹45,500',
+  cityHeading: "KRABI • PHUKET",
   duration: '6 Nights/7 Days',
 
   details: [
@@ -246,8 +252,9 @@ export const PACKAGE_DETAILS = {
 },
 
   '7N|8D': {
-  title: 'Thailand Exclusive',
+  title: 'THAILAND EXCLUSIVE',
   price: '₹52,000',
+  cityHeading: "KRABI • PHUKET",
   duration: '7 Nights/8 Days',
 
   details: [
@@ -304,8 +311,9 @@ export const PACKAGE_DETAILS = {
 },
 
 '8N|9D': {
-  title: 'Majestic Thailand',
+  title: 'MAJESTIC THAILAND',
   price: '₹58,000',
+  cityHeading: "KRABI • PHUKET",
   duration: '8 Nights/9 Days',
 
   details: [
