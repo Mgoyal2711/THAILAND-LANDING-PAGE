@@ -104,18 +104,38 @@ function PackageCard({
           </p>
 
           <div className="mt-3">
-            <p className="text-base font-semibold text-navy">Inclusions</p>
+  <p className="text-base font-semibold text-navy">Inclusions</p>
 
-            <div className="mt-2 flex flex-wrap items-center gap-3 text-2xl">
-              <span title="Meals">🍽️</span>
-              <span className="text-gray-400">|</span>
-              <span title="Airport Transfers">🚐</span>
-              <span className="text-gray-400">|</span>
-              <span title="Hotel">🏨</span>
-              <span className="text-gray-400">|</span>
-              <span title="Transport">🚗</span>
-            </div>
-          </div>
+  <div className="mt-3 grid grid-cols-4 gap-3">
+    <div className="flex flex-col items-center text-center">
+      <span className="text-2xl">🍽️</span>
+      <span className="mt-1 text-[11px] font-semibold leading-tight text-gray-700">
+        Meals
+      </span>
+    </div>
+
+    <div className="flex flex-col items-center text-center">
+      <span className="text-2xl">🚐</span>
+      <span className="mt-1 text-[11px] font-semibold leading-tight text-gray-700">
+        Airport Transfers
+      </span>
+    </div>
+
+    <div className="flex flex-col items-center text-center">
+      <span className="text-2xl">🏨</span>
+      <span className="mt-1 text-[11px] font-semibold leading-tight text-gray-700">
+        Hotel
+      </span>
+    </div>
+
+    <div className="flex flex-col items-center text-center">
+      <span className="text-2xl">🚗</span>
+      <span className="mt-1 text-[11px] font-semibold leading-tight text-gray-700">
+        Transport
+      </span>
+    </div>
+  </div>
+</div>
 
           <div className="mt-4">
             <p className="text-lg font-extrabold text-navy">
