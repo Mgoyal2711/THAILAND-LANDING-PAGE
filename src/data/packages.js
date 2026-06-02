@@ -24,6 +24,7 @@ export const PACKAGE_DETAILS = {
   '3N|4D': {
     title: 'SIMPLY THAILAND',
     price: '₹20,000',
+    extraAdultPrice: "₹12,500",
     duration: '3 Nights/4 Days',
     cityHeading: "pattaya • bangkok",
     details: [
@@ -64,6 +65,7 @@ export const PACKAGE_DETAILS = {
   '4N|5D': {
     title: 'WONDERFUL THAILAND',
     price: '₹27,000',
+    extraAdultPrice: "₹17,000",
     cityHeading: "BANGKOK • pattaya",
     duration: '4 Nights/5 Days',
 
@@ -113,7 +115,8 @@ export const PACKAGE_DETAILS = {
 
   '4Night|5D': {
     title: 'PLEASURABLE THAILAND',
-    price: '₹28,0000',
+    price: '₹28,000',
+    extraAdultPrice: "₹17,500",
     cityHeading: "KRABI • PHUKET",
     duration: '4 Nights/5 Days',
 
@@ -163,7 +166,8 @@ export const PACKAGE_DETAILS = {
 
   '5N|6D': {
     title: 'AMAZING THAILAND',
-    price: '₹35,500',
+    price: '₹22,000',
+    extraAdultPrice: "₹15,000",
     cityHeading: "PHUKET • PHIPHI • KRABI",
     duration: '5 Nights/6 Days',
 
@@ -205,7 +209,8 @@ export const PACKAGE_DETAILS = {
   },
   '6N|7D': {
     title: 'BLISSFUL THAILAND',
-    price: '₹45,500',
+    price: '₹28,500',
+    extraAdultPrice: "₹15,000",
     cityHeading: "KRABI • PHUKET • BANGKOK",
     duration: '6 Nights/7 Days',
 
@@ -252,8 +257,9 @@ export const PACKAGE_DETAILS = {
   },
 
   '7N|8D': {
-    title: 'THAILAND EXCLUSIVE',
+    title: 'EXOTIC THAILAND',
     price: '₹52,000',
+    extraAdultPrice: "₹32,500",
     cityHeading: "KRABI • PHUKET • PATTAYA • BANGKOK",
     duration: '7 Nights/8 Days',
 
@@ -312,7 +318,8 @@ export const PACKAGE_DETAILS = {
 
   '8N|9D': {
     title: 'MAJESTIC THAILAND',
-    price: '₹58,000',
+    price: '₹36,500',
+    extraAdultPrice: "₹15,000",
     cityHeading: "BANGKOK • PATTAYA • KRABI • PHIPHI • PHUKET",
     duration: '8 Nights/9 Days',
 

@@ -112,9 +112,11 @@ function PackageCard({
           </p>
 
           <p className="mt-2 text-base font-semibold text-navy">
-            Extra Adult{" "}
-            <span className="font-extrabold text-red-600">₹15000</span>
-          </p>
+  Extra Adult{" "}
+  <span className="font-extrabold text-red-600">
+    {packageInfo?.extraAdultPrice || "₹15,000"}
+  </span>
+</p>
 
           <p className="mt-1 text-base text-navy">
             <span className="font-extrabold">4 Star</span> Hotel
