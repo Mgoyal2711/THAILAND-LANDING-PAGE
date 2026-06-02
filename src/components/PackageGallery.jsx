@@ -94,7 +94,7 @@ function PackageCard({
         </div>
 
         <h3 className="text-2xl font-bold text-navy ">
-          <span className="inline box-decoration-clone bg-accent px-1 leading-tight py-1 px-1 rounded-sm">
+          <span className="inline box-decoration-clone bg-accent px-1 leading-tight py-1 rounded-sm">
             {packageInfo?.title}
           </span>
         </h3>
@@ -162,7 +162,7 @@ function PackageCard({
           onClick={() => setExpanded(expanded === category ? null : category)}
           className="mt-4 w-full rounded-xl border border-red-500 py-3 font-semibold text-red-600 transition hover:bg-red-50"
         >
-          {expanded === category ? "Hide Details ▲" : "Tour Highlights ▼"}
+          {expanded === category ? "Hide Tour Details ▲" : "View Tour Details ▼"}
         </button>
 
         {expanded === category && (

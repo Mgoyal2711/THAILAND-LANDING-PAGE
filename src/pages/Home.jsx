@@ -658,13 +658,13 @@ shadow-lg
             </div>
 
 
-            <a href="https://wa.me/919599260057" target="_blank" rel="noopener noreferrer"
-              className="inline-flex w-full shrink-0 items-center justify-center rounded-2xl bg-gradient-to-r from-[#ffcc00] to-[#ffb700] px-8 py-4 text-base font-extrabold text-[#082c4c] shadow-xl transition hover:scale-105 hover:brightness-105 md:w-auto">
-
-              Book Now
-
-            </a>
-
+            <button
+  type="button"
+  onClick={openEnquiryModal}
+  className="inline-flex w-full shrink-0 items-center justify-center rounded-2xl bg-gradient-to-r from-[#ffcc00] to-[#ffb700] px-8 py-4 text-base font-extrabold text-[#082c4c] shadow-xl transition hover:scale-105 hover:brightness-105 md:w-auto"
+>
+  Book Now
+</button>
           </div>
 
         </div>
