@@ -378,18 +378,25 @@ function PackageCard({
       <div className="p-5">
         
 
-{packageInfo?.cityHeading && (
+{/* {packageInfo?.cityHeading && (
   <p className="mb-2 text-sm font-extrabold uppercase tracking-wide text-blue-700">
     {packageInfo.cityHeading}
   </p>
-)}
+)} */}
 
+{packageInfo?.cityHeading && (
+  <div className="mb-2 flex justify-end">
+    <span className="rounded-full bg-blue-50 px-3 py-1 text-sm font-extrabold uppercase tracking-wide text-blue-700">
+      {packageInfo.cityHeading}
+    </span>
+  </div>
+)}
         <div className="mb-2 inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-green-700">
           ALL INCLUSIVE
         </div>
 
         <h3 className="text-2xl font-bold text-navy">
-          <span className="inline box-decoration-clone bg-accent px-1 leading-tight">
+          <span className="inline box-decoration-clone bg-accent px-1 leading-tight py-1 px-1 rounded-sm">
             {packageInfo?.title}
           </span>
         </h3>

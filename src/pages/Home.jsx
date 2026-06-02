@@ -1,8 +1,30 @@
-import PackageGallery from '../components/PackageGallery';
-import OptimizedImage from '../components/OptimizedImage';
-import LucideIcon from '../components/LucideIcon';
+import { useEffect, useState } from "react";
+import PackageGallery from "../components/PackageGallery";
+import OptimizedImage from "../components/OptimizedImage";
+import LucideIcon from "../components/LucideIcon";
+
+const happyClientImages = [
+  `${import.meta.env.BASE_URL}optimized/arrivals/client-1.jpg`,
+  `${import.meta.env.BASE_URL}optimized/arrivals/client-2.jpg`,
+  `${import.meta.env.BASE_URL}optimized/arrivals/client-3.jpg`,
+  `${import.meta.env.BASE_URL}optimized/arrivals/client-4.jpg`,
+];
+
 
 export default function Home({ openEnquiryModal }) {
+
+
+  const [activeClientImage, setActiveClientImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveClientImage((current) =>
+        current === happyClientImages.length - 1 ? 0 : current + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
   return (
     <>
 
@@ -307,20 +329,20 @@ shadow-lg
                   <div className="hidden md:block shrink-0">
 
                     <img
-  src={`${import.meta.env.BASE_URL}optimized/img/badge-display.jpg`}
-  alt="Season Sale 20% off"
-  loading="lazy"
-  decoding="async"
-  width="500"
-  height="333"
-  className="
+                      src={`${import.meta.env.BASE_URL}optimized/img/badge-display.jpg`}
+                      alt="Season Sale 20% off"
+                      loading="lazy"
+                      decoding="async"
+                      width="500"
+                      height="333"
+                      className="
     w-[250px]
     h-auto
     object-contain
     -ml-10
     animate-badge
   "
-/>
+                    />
 
                   </div>
 
@@ -653,41 +675,58 @@ shadow-lg
 
 
 
-      <section className="px-4 py-6 sm:px-6 lg:px-8 bg-slate-50">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-slate-50 px-4 py-10 sm:px-6 lg:px-8">
+  <style>
+    {`
+      @keyframes happyClientsMarquee {
+        from {
+          transform: translateX(-50%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+    `}
+  </style>
 
-          <div className="text-center">
-            <h2 className="font-display text-3xl font-extrabold text-navy sm:text-4xl">
-              Happy Clients
-            </h2>
-          </div>
+  <div className="mx-auto max-w-7xl overflow-hidden">
+    <div className="text-center">
+      <h2 className="font-display text-3xl font-extrabold text-navy sm:text-4xl">
+        Happy Clients
+      </h2>
+    </div>
 
-          <div className="mt-12 flex justify-center">
-            <figure className="overflow-hidden rounded-[24px] border border-cyan-400/40 shadow-[0_0_25px_rgba(34,211,238,0.45)]">
-
+    <div className="mt-12 overflow-hidden">
+      <div className="flex w-max gap-6 [animation:happyClientsMarquee_22s_linear_infinite]">
+        {[
+          "client-1.jpg",
+          "client-2.jpg",
+          "client-3.jpg",
+          "client-4.jpg",
+          "client-1.jpg",
+          "client-2.jpg",
+          "client-3.jpg",
+          "client-4.jpg",
+        ].map((image, index) => (
+          <figure
+            key={`${image}-${index}`}
+            className="w-[300px] shrink-0 overflow-hidden rounded-[24px] border border-cyan-400/40 bg-white shadow-[0_0_25px_rgba(34,211,238,0.35)] sm:w-[380px] lg:w-[450px]"
+          >
             <img
-  src={`${import.meta.env.BASE_URL}optimized/arrivals/image-display.jpg`}
-  alt="Recent arrival"
-  loading="lazy"
-  decoding="async"
-  width="600"
-  height="900"
-  className="
-    w-[320px]
-    sm:w-[380px]
-    lg:w-[450px]
-    h-auto
-    object-contain
-    transition duration-700 hover:scale-105
-  "
-/>
-
-            </figure>
-          </div>
-
-        </div>
-      </section>
-
+              src={`${import.meta.env.BASE_URL}optimized/arrivals/${image}`}
+              alt={`Happy client ${index + 1}`}
+              loading="lazy"
+              decoding="async"
+              width="600"
+              height="450"
+              className="h-[240px] w-full object-cover sm:h-[300px] lg:h-[340px]"
+            />
+          </figure>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
 
       <section className="px-4 py-6 sm:px-6 lg:px-8 bg-slate-50">
