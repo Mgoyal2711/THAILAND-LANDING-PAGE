@@ -1,7 +1,7 @@
 export const PACKAGE_CATEGORIES = [
   '3N|4D',
   '4N|5D',
-  '4N|5D',
+  '4Night|5D',
   '5N|6D',
   '6N|7D',
   '7N|8D',
@@ -13,7 +13,7 @@ const BASE = import.meta.env.BASE_URL;
 export const PACKAGE_IMAGES_BY_CATEGORY = {
   '3N|4D': [`${BASE}optimized/3-nights/0.jpg`],
   '4N|5D': [`${BASE}optimized/4-nights/1.jpg`],
-  '4N|5D': [`${BASE}optimized/4-nights/1.jpg`],
+  '4Night|5D': [`${BASE}optimized/4-nights/1.1.jpg`],
   '5N|6D': [`${BASE}optimized/5-nights/2.jpg`],
   '6N|7D': [`${BASE}optimized/6-nights/3.jpg`],
   '7N|8D': [`${BASE}optimized/7-nights/4.jpg`],
@@ -108,46 +108,53 @@ export const PACKAGE_DETAILS = {
   ],
 },
 
-  '4N|5D': {
-  title: 'Amazing Thailand',
-  price: '₹35,500 / Person',
+  '4Night|5D': {
+  title: 'Pleasurable Thailand',
+  price: '₹28,0000 / Person',
   duration: '3 Nights/4 Days',
 
   details: [
-    '🏨 Glow Ao Nang Krabi or Similar – 2 Nights Stay',
-    '🏨 Sunset Beach Resort Phuket or Similar – 2 Nights Stay',
+  "🏨 Glow Ao Nang Krabi or Similar, Krabi - 2 Nights Stay",
+  "🏨 Sunset Beach Resort or Similar, Phuket - 2 Nights Stay",
 
-    '⭐ 4 Star Premium Accommodation',
+  "⭐ 4 Star Premium Accommodation",
 
-    '🍽️ Daily Breakfast Included',
+  "🛏️ 2 Nights Accommodation in Krabi",
+  "🛏️ 2 Nights Accommodation in Phuket",
 
-    '✈️ Meet & Greet Service at Airport',
+  "✨ Tour Highlights",
 
-    '🚖 Private Airport Transfers',
-    '🚐 Private Intercity Transfers',
+  "🏨 Accommodation in Well Appointed Rooms with Priority Check-In",
 
-    '🏝️ Four Island Tour by Speed Boat with Lunch',
+  "✈️ Meet & Greet Service at Airport",
 
-    '🛕 Phuket City Tour with Big Buddha',
+  "🍽️ Meals - Daily Breakfast",
 
-    '🌃 Bangla Road & Patong Beach Visit',
+  "🚖 Private Airport Transfers",
+  "🚐 Private Intercity Transfers",
 
-    '🚤 Phi Phi Island Premium Tour by Speed Boat with Lunch',
+  "🏝️ Four Island Tour by Speed Boat with Lunch",
 
-    '🧑‍💼 Guided Sightseeing Tour',
+  "🛕 Phuket City Tour with Big Buddha",
 
-    '📄 Thailand Arrival Card Assistance',
+  "🌃 Bangla Road & Patong Beach Visit",
 
-    '🛡️ Travel Insurance Included',
+  "🚤 Phi Phi Island Premium Tour by Speed Boat with Lunch",
 
-    '⏰ Flight Delay Coverage (Up to 2 Hours)',
+  "🧑‍💼 Sightseeing with Tour Guide - Seat in Coach",
 
-    '🏨 Early Check-In (Subject to Availability)',
+  "📄 Thailand Arrival Card Assistance",
 
-    '📞 24×7 On-Ground Assistance',
+  "🛡️ Trip Insurance Included",
 
-    '💰 All Local Thai Taxes & GST Included',
-  ],
+  "⏰ 2 Hours Detour Time in Flight Delay Case",
+
+  "🏨 Early Check-In Available",
+
+  "📞 24×7 On-Ground Assistance",
+
+  "💰 All Local Thai Taxes / GST Included",
+],
 },
 
   '5N|6D': {
