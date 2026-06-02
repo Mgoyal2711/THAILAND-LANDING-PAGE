@@ -6,18 +6,28 @@ import {
 } from "../data/packages";
 import OptimizedImage from "./OptimizedImage";
 
+const BADGES = [
+  "🏆 POPULAR PACKAGE",
+  "🔥 BEST SELLING",
+  "✈️ HIGH DEMAND",
+  "❤️ BEST SELLING",
+  "💰 VALUE FOR MONEY",
+  "🌟 HIGH DEMAND",
+  "🎁 SUPER SAVER",
+];
+
 function PackageCard({
   src,
   category,
   onEnquire,
   expanded,
   setExpanded,
+  badgeText = BADGES[0],
 }) {
   const packageInfo = PACKAGE_DETAILS[category];
 
   return (
     <article className="group relative w-full overflow-hidden rounded-2xl border border-white/50 bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-
       {/* Live Sale Badge */}
       <div className="absolute left-3 top-3 z-20">
         <div
@@ -39,54 +49,99 @@ function PackageCard({
           <span className="h-2 w-2 rounded-full bg-yellow-100"></span>
 
           <span className="text-[10px] font-black tracking-[1.5px] uppercase text-white">
-            🔥 LIVE SALE
+            {badgeText}
           </span>
         </div>
       </div>
 
-      <OptimizedImage
-        src={src}
-        alt={packageInfo?.title || "Thailand Package"}
-        width="666"
-        height="1000"
-        className="ko-img h-auto w-full object-contain object-top transition duration-500"
-      />
+      <div className="relative h-[260px] w-full overflow-hidden sm:h-[280px] lg:h-[300px]">
+  <OptimizedImage
+    src={src}
+    alt={packageInfo?.title || "Thailand Package"}
+    width="666"
+    height="1000"
+    className="ko-img h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
+  />
+
+  <div className="absolute bottom-0 right-0 bg-red-500 px-5 py-3">
+    <span className="text-base font-bold text-white">
+      {packageInfo?.duration}
+    </span>
+  </div>
+</div>
 
       <div className="p-5">
-
         <h3 className="text-2xl font-bold text-navy">
           {packageInfo?.title}
         </h3>
 
-        <p className="mt-1 text-gray-500 font-medium">
+        {/* <p className="mt-1 font-medium text-gray-500">
           {category.replace("|", "/")}
-        </p>
+        </p> */}
 
-        <p className="mt-3 text-3xl font-extrabold text-red-600">
-          {packageInfo?.price}
-        </p>
+        <div className="mt-3">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-3xl font-extrabold text-red-600">
+              {packageInfo?.price}
+            </p>
+
+            {/* <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-bold text-blue-700">
+              {packageInfo?.duration}
+            </span> */}
+          </div>
+
+          <p className="mt-1 text-sm font-semibold text-gray-700">
+            Per Person | Min Pax - 2-4 Person
+          </p>
+
+          <p className="mt-2 text-base font-semibold text-navy">
+            Extra Adult{" "}
+            <span className="font-extrabold text-red-600">₹15000</span>
+          </p>
+
+          <p className="mt-1 text-base text-navy">
+            <span className="font-extrabold">4 Star</span> Hotel
+          </p>
+
+          <div className="mt-3">
+            <p className="text-base font-semibold text-navy">Inclusions</p>
+
+            <div className="mt-2 flex flex-wrap items-center gap-3 text-2xl">
+              <span title="Meals">🍽️</span>
+              <span className="text-gray-400">|</span>
+              <span title="Airport Transfers">🚐</span>
+              <span className="text-gray-400">|</span>
+              <span title="Hotel">🏨</span>
+              <span className="text-gray-400">|</span>
+              <span title="Transport">🚗</span>
+            </div>
+          </div>
+
+          <div className="mt-4">
+            <p className="text-lg font-extrabold text-navy">
+              Package Excludes
+            </p>
+
+            <p className="mt-2 flex items-center gap-2 text-sm font-semibold text-gray-700">
+              <span className="text-xl text-red-600">❌</span>
+              Flight Ticket Available - At Best Prices
+            </p>
+          </div>
+        </div>
 
         {/* More Info Button */}
         <button
           type="button"
-          onClick={() =>
-            setExpanded(
-              expanded === category ? null : category
-            )
-          }
+          onClick={() => setExpanded(expanded === category ? null : category)}
           className="mt-4 w-full rounded-xl border border-red-500 py-3 font-semibold text-red-600 transition hover:bg-red-50"
         >
-          {expanded === category
-            ? "Hide Details ▲"
-            : "Inclusion ▼"}
+          {expanded === category ? "Hide Details ▲" : "Package Inclusion ▼"}
         </button>
 
         {/* Expandable Details */}
         {expanded === category && (
-          <div className="mt-4 rounded-xl bg-slate-50 p-4 border">
-            <h4 className="mb-3 font-bold text-navy">
-              Package Details
-            </h4>
+          <div className="mt-4 rounded-xl border bg-slate-50 p-4">
+            <h4 className="mb-3 font-bold text-navy">Package Details</h4>
 
             <ul className="space-y-2 text-sm text-gray-700">
               {packageInfo?.details?.map((item) => (
@@ -97,26 +152,22 @@ function PackageCard({
         )}
 
         {/* Buttons */}
-       <div className="mt-5">
-  <button
-    type="button"
-    onClick={onEnquire}
-    className="w-full flex min-h-12 items-center justify-center rounded-xl bg-[#0039b3] px-4 py-3 text-sm font-bold text-white transition hover:scale-105"
-  >
-    ENQUIRE NOW
-  </button>
-</div>
+        <div className="mt-5">
+          <button
+            type="button"
+            onClick={onEnquire}
+            className="flex min-h-12 w-full items-center justify-center rounded-xl bg-[#0039b3] px-4 py-3 text-sm font-bold text-white transition hover:scale-105"
+          >
+            BOOK NOW
+          </button>
+        </div>
       </div>
-
     </article>
   );
 }
 
 export default function PackageGallery({ onEnquire }) {
-  const [activeCategory, setActiveCategory] = useState(
-    PACKAGE_CATEGORIES[0]
-  );
-
+  const [activeCategory, setActiveCategory] = useState(PACKAGE_CATEGORIES[0]);
   const [expanded, setExpanded] = useState(null);
 
   const mobileCardRefs = useRef({});
@@ -142,10 +193,9 @@ export default function PackageGallery({ onEnquire }) {
   const mobilePackages = desktopPackages;
 
   return (
-    <section className="px-4 pt-10 pb-12 sm:px-6 lg:px-8">
+    <section className="px-4 pb-12 pt-10 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-
-        <div className="mb-8 text-center reveal">
+        <div className="reveal mb-8 text-center">
           <h2 className="font-display mt-2 text-3xl font-extrabold text-navy sm:text-4xl">
             Popular Thailand Packages
           </h2>
@@ -157,7 +207,6 @@ export default function PackageGallery({ onEnquire }) {
 
         {/* Mobile Category Tabs */}
         <div className="glass-panel reveal mb-8 flex flex-wrap justify-center gap-3 rounded-2xl p-4 shadow-card md:hidden">
-
           {PACKAGE_CATEGORIES.map((category) => {
             const isActive = category === activeCategory;
 
@@ -176,18 +225,18 @@ export default function PackageGallery({ onEnquire }) {
               </button>
             );
           })}
-
         </div>
 
         <div className="package-container reveal">
-
           {/* Mobile */}
           <div className="flex flex-col gap-6 md:hidden">
-            {mobilePackages.map(({ category, src }) => (
+            {mobilePackages.map(({ category, src }, index) => (
               <div
                 key={`${category}-${src}`}
                 ref={(node) => {
-                  mobileCardRefs.current[category] = node;
+                  if (node && !mobileCardRefs.current[category]) {
+                    mobileCardRefs.current[category] = node;
+                  }
                 }}
               >
                 <PackageCard
@@ -196,14 +245,15 @@ export default function PackageGallery({ onEnquire }) {
                   onEnquire={onEnquire}
                   expanded={expanded}
                   setExpanded={setExpanded}
+                  badgeText={BADGES[index % BADGES.length]}
                 />
               </div>
             ))}
           </div>
 
           {/* Desktop */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6">
-            {desktopPackages.map(({ category, src }) => (
+          <div className="hidden gap-6 md:grid md:grid-cols-3">
+            {desktopPackages.map(({ category, src }, index) => (
               <PackageCard
                 key={`${category}-${src}`}
                 src={src}
@@ -211,12 +261,11 @@ export default function PackageGallery({ onEnquire }) {
                 onEnquire={onEnquire}
                 expanded={expanded}
                 setExpanded={setExpanded}
+                badgeText={BADGES[index % BADGES.length]}
               />
             ))}
           </div>
-
         </div>
-
       </div>
     </section>
   );
