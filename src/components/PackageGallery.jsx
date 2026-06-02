@@ -89,11 +89,11 @@ function PackageCard({
     </span>
   </div>
 )} */}
-        <div className="mb-2 inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-green-700">
+        <div className="mb-2 inline-flex items-center rounded-full bg-green-100 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-green-700 mt-1.5">
           ALL INCLUSIVE
         </div>
 
-        <h3 className="text-2xl font-bold text-navy">
+        <h3 className="text-2xl font-bold text-navy ">
           <span className="inline box-decoration-clone bg-accent px-1 leading-tight py-1 px-1 rounded-sm">
             {packageInfo?.title}
           </span>
@@ -118,9 +118,9 @@ function PackageCard({
           <p className="mt-1 text-base text-navy">
             <span className="font-extrabold">4 Star</span> Hotel
           </p>
-          <br></br>
+          
 
-          <div className="mt-3">
+          <div className="mt-4">
             <p className="text-base font-extrabold text-orange-700">
               Inclusions
             </p>
