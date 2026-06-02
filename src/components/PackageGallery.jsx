@@ -112,7 +112,7 @@ function PackageCard({
               </p>
 
               {packageInfo?.offerPrice && (
-                <span className="mb-1 rounded-full bg-red-100 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-red-700">
+                <span className="mb-1 rounded-full bg-green-100 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-600">
                   Offer Price
                 </span>
               )}
